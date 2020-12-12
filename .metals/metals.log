@@ -1,0 +1,4 @@
+2020.12.12 15:03:02 INFO  Started: Metals version 0.9.7 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2020.12.12 15:03:03 INFO  time: initialize in 0.91s
+2020.12.12 15:03:05 WARN  Build server is not auto-connectable.
+2020.12.12 15:03:05 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
