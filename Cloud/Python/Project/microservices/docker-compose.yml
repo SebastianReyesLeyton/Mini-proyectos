@@ -1,4 +1,4 @@
-version: "1"
+version: "2"
 services:
   db:
     image: mysql:5.7
@@ -10,7 +10,7 @@ services:
       MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: test
     volumes:
-      - ./DB:/DataBase
+      - ./DB:/docker-entrypoint-initdb.d
       - persistent:/var/lib/mysql
     networks:
       - default
