@@ -14,5 +14,20 @@ services:
       - persistent:/var/lib/mysql
     networks:
       - default
+  cloudapi:
+    build: ./cloudApi
+    image: cloud_api
+    container_name: cloudApi
+    command: python3 main.py
+    ports: 
+      - "5000-5000"
+    environment: 
+      MYSQLPASSWORD: test
+    links:
+      - db
+    depends_on: 
+      - db
+    networks: 
+      - default
 volumes:
   persistent:

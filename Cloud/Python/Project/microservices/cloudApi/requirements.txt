@@ -1,0 +1,11 @@
+Flask
+flask-cors
+redis
+PyMySQL
+flask-mysql
+flask-sqlalchemy
+flask-marshmallow
+marshmallow-sqlalchemy
+flask-jwt-extended
+flask-swagger-ui==3.20.9
+pika

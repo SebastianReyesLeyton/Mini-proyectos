@@ -10,6 +10,7 @@ main() {
     elif [[ $1 == down ]];
     then
         sudo docker-compose down --volumes
+        sudo docker image rm cloud_api
     elif [[ $1 == up ]];
     then
         sudo docker-compose up -d

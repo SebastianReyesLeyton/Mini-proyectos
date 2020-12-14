@@ -4,3 +4,7 @@
 2020.12.12 15:03:05 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 dic 12, 2020 4:08:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFORMACIÓN: Unsupported notification method: $/setTraceNotification
+2020.12.13 21:26:11 INFO  Started: Metals version 0.9.7 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2020.12.13 21:26:12 INFO  time: initialize in 1.1s
+2020.12.13 21:26:18 WARN  Build server is not auto-connectable.
+2020.12.13 21:26:18 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
