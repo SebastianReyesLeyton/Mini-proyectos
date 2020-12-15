@@ -1,12 +1,11 @@
-from os import listdir
-from os.path import isfile
-
+from pathlib import Path
 class FileRepository(object):
     def __init__(self):
         self.files = []
         self.dirs = []
 
     def getAllData(self, path):
-        self.files = [ file for file in listdir(path) if isfile(file) ]
-        self.dirs = [ file for file in listdir(path) if not isfile(file) ]
+        directory = Path(path)
+        self.files = [ file.name for file in directory.iterdir() if file.is_file() ]
+        self.dirs = [ file.name for file in directory.iterdir() if file.is_dir() ]
         return (self.files, self.dirs)

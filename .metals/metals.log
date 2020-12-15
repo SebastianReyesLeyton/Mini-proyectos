@@ -17,3 +17,4 @@ INFORMACIÓN: Unsupported notification method: $/setTraceNotification
 2020.12.14 23:50:57 INFO  time: initialize in 2.44s
 2020.12.14 23:51:00 WARN  Build server is not auto-connectable.
 2020.12.14 23:51:00 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.15 00:34:56 INFO  shutting down Metals

@@ -1,0 +1,31 @@
+.container {
+    background-color: aqua;
+}
+
+.container li {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    background-color: chartreuse;
+    border-bottom: solid black;
+}
+
+.container li i {
+    position: absolute;
+    color: cadetblue;
+    font-size: 1em;
+}
+
+.container .directory i {
+    color: black;
+}
+
+.container .files i {
+    left: 1.6em;
+}
+
+.container li label {
+    position: relative;
+    left: 2em;
+    font-family: 'Poppins', sans-serif;
+}

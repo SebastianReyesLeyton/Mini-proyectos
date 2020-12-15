@@ -12,7 +12,7 @@ def obtainFiles(path):
     try:
         print('/'.join(path.split('-')))
         files, dirs = fileService.getAllFiles('{0}'.format('/'.join(path.split('-'))))
-        resp = jsonify({'files': files, 'directiores': dirs})
+        resp = jsonify({'directories': dirs, 'files': files})
         resp.status_code = 200
         return resp
     except Exception as e:

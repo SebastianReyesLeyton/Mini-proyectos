@@ -1,9 +1,12 @@
 from os import listdir, scandir, environ
 from os.path import isfile
+from pathlib import Path
 
-def obtainFiles(path='.'): return [ file for file in listdir(path) if isfile(file) ]
-def obtainDir(path='.'): return [ file for file in listdir(path) if not isfile(file) ]
+path = "../Project/microservices/DB/FileUsers/sebas.reyes"
+directories = Path(path)
+def obtainFiles(): return [ file.name for file in directories.iterdir() if file.is_file() ]
+def obtainDir(): return [ file.name for file in directories.iterdir() if file.is_dir() ]
 
-print("Directories: {0}".format(obtainDir("../")))
-print("File: {0}".format(obtainFiles("../")))
-print("Environ {0}".format(environ))
+print("Files: {0}".format(obtainFiles()))
+print("Directories: {0}".format(obtainDir()))
+#print("Environ {0}".format(environ))

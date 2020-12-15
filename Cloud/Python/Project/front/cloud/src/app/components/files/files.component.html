@@ -1,0 +1,9 @@
+<div class=container>
+    <h2> {{ configUrl }}</h2>
+    <li *ngFor="let dir of info.directories" class="directory">
+        <i class="fas fa-folder"></i> <label>{{ dir }}</label>
+    </li>
+    <li *ngFor="let file of info.files" class="files">
+        <i class="fas fa-file"></i> <label>{{ file }}</label>
+    </li>
+</div>
