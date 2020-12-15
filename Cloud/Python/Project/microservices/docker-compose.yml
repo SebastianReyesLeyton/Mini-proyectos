@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
   db:
     image: mysql:5.7
@@ -10,14 +10,14 @@ services:
       MYSQL_PASSWORD: 123456
       MYSQL_ROOT_PASSWORD: test
     volumes:
-      - ./DB:/docker-entrypoint-initdb.d
+      - ./DB/dump:/docker-entrypoint-initdb.d
       - persistent:/var/lib/mysql
     networks:
       - default
   cloudapi:
     build: ./cloudApi
     image: cloud_api
-    container_name: cloudApi
+    container_name: CloudApi
     command: python3 main.py
     ports: 
       - "5000-5000"
@@ -29,5 +29,7 @@ services:
       - db
     networks: 
       - default
+    volumes:
+      - ./DB/FileUsers:/db
 volumes:
   persistent:
