@@ -1,31 +1,66 @@
 .container {
-    background-color: aqua;
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    align-items: center;
 }
 
-.container li {
+.container #route {
+    grid-row: 1;
+    height: 100%;
+    font-size: 14px;
+}
+
+.container .data {
+    grid-row: 2;
+}
+
+.container .data li {
     display: flex;
     flex-direction: row;
-    padding: 1em;
-    background-color: chartreuse;
-    border-bottom: solid black;
+    align-items: center;
+    padding: 0.2em;
+    background-color: rgb(106, 182, 175, 0.3);
+    border-bottom: solid 1px black;
+    cursor: pointer;
 }
 
-.container li i {
-    position: absolute;
-    color: cadetblue;
-    font-size: 1em;
+.container .data li .directory {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    transition: all 0.3s;
 }
 
-.container .directory i {
-    color: black;
+.container .data li:hover {
+    background-color: rgb(42, 54, 54);
+    color: rgb(230, 235, 235);
 }
 
-.container .files i {
-    left: 1.6em;
+.container .data li .directory .name {
+    cursor: pointer;
+    grid-column: 2;
 }
 
-.container li label {
-    position: relative;
-    left: 2em;
-    font-family: 'Poppins', sans-serif;
+.container .data .files {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.container .data .files:hover {
+    background-color: rgb(42, 54, 54);
+    color: rgb(230, 235, 235);
+    box-shadow: 0px 3px rgb(0, 138, 138, 0.2);
+}
+
+.container .data .files i {
+    grid-column: 1;
+    padding-left: 2px;
+}
+
+.container .data .files .name {
+    grid-column: 2;
 }
