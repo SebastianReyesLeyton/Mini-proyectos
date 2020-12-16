@@ -17,3 +17,19 @@ def obtainFiles(path):
         return resp
     except Exception as e:
         print(e)
+
+@file_api.route('/saveFile/<string:path>/', methods=['POST'])
+def saveFile(path):
+    try:
+        if 'file' not in request.files:
+            resp = jsonify({'message': 'Param is not found'})
+            resp.status_code = 404
+            return resp
+        f = request.files['file']
+        fileService.saveFile(f, '/'.join(path.split('-')), f.filename)
+        resp = jsonify({'message': 'Ok'})
+        resp.status_code = 200
+        return resp
+    except Exception as e:
+        print(e)
+
