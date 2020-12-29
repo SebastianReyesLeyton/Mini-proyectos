@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FilesComponent } from './components/files/files.component';
+import { OptionsComponent } from './components/options/options.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilesComponent
+    FilesComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,

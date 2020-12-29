@@ -37,3 +37,9 @@ INFORMACIÓN: Unsupported notification method: $/setTraceNotification
 2020.12.16 15:02:31 INFO  time: initialize in 0.88s
 2020.12.16 15:02:36 WARN  Build server is not auto-connectable.
 2020.12.16 15:02:36 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.16 18:07:31 INFO  shutting down Metals
+2020.12.28 18:58:30 INFO  Started: Metals version 0.9.7 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2020.12.28 18:58:32 INFO  time: initialize in 1.99s
+2020.12.28 18:58:34 WARN  Build server is not auto-connectable.
+2020.12.28 18:58:34 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.28 18:58:53 INFO  shutting down Metals

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Data } from 'src/app/scripts/data';
+import { Data, user } from 'src/app/scripts/data';
 import { ConfigService } from '../../services/config.service';
 
 @Component({
@@ -10,18 +10,16 @@ import { ConfigService } from '../../services/config.service';
 })
 export class FilesComponent implements OnInit {
   info: Data;
-  user = 'sebas.reyes';
-  configUrl = '';
   displayUrl = '';
   constructor( private configService: ConfigService ) { }
 
   getFiles(): void {
     this.configService
-      .getConfig(`sebas.reyes${this.configUrl}/`)
+      .getConfig(`${user.username}${user.configUrl}/`)
       .subscribe((data: Data) => {
         console.log(data);
         this.info = data;
-        if (this.configUrl !== '') {
+        if (user.configUrl !== '') {
           this.info.directories.unshift('/..');
         }
         console.log(this.info);
@@ -30,7 +28,7 @@ export class FilesComponent implements OnInit {
   }
 
   getUpdir(folder: string): void {
-    this.configUrl = `${this.configUrl}-${folder}`;
+    user.configUrl = `${user.configUrl}-${folder}`;
     if (this.displayUrl === '') {
       this.displayUrl = folder;
     }
@@ -41,9 +39,9 @@ export class FilesComponent implements OnInit {
   }
 
   getDowndir(): void {
-    let tmp: Array<string> = this.configUrl.split('-');
+    let tmp: Array<string> = user.configUrl.split('-');
     tmp.pop();
-    this.configUrl = tmp.join('-');
+    user.configUrl = tmp.join('-');
     tmp = this.displayUrl.split('>');
     tmp.pop();
     this.displayUrl = tmp.join('>');

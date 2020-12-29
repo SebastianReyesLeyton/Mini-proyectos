@@ -21,6 +21,13 @@ main() {
         bash docker.sh down
         echo ""
         cd ..
+    elif [[ $1 == back ]];
+    then
+        echo -e "\n\e[96m\e[1m>> Montando el BackEnd. \e[0m"
+        echo ""
+        cd microservices
+        bash docker.sh up
+        cd ..
     fi
 }
 

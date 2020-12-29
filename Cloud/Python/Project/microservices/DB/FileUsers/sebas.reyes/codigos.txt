@@ -1,0 +1,8 @@
+COMANDOS PARA HACER QUE SALGAN CUADROS DE TEXTO
+
+xmessage -center "Texto que yo quiera"
+whiptail --title "Nombre del titulo" --msgbox "Texto que quiera yo que aparezca"
+zenity --error --text="Texto que quiera que aparezca" --title="Titulo de las ventana"
+zenity --question --text="Texto que quiera que aparezca"
+notify-send 'Titulo de la notificacion' 'Mensaje que quiera que aparezca'
+
