@@ -13,6 +13,7 @@ main() {
         sudo docker-compose down --volumes
         echo -e "\n\e[91m\e[1m>> Eliminando la imagen cloud_api. \e[0m"
         sudo docker image rm cloud_api
+        sudo docker image rm microservices_front:latest
         echo ""
     elif [[ $1 == up ]];
     then

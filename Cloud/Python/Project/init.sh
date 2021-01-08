@@ -11,7 +11,7 @@ main() {
         echo -e "\n\e[94m\e[1m>> Montado el FrontEnd. \e[0m"
         cd front/cloud
         echo ""
-        ng serve --open
+        ng serve --host 0.0.0.0
         echo ""
     elif [[ $1 == stop ]];
     then

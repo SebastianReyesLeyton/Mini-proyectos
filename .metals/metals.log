@@ -43,3 +43,19 @@ INFORMACIÓN: Unsupported notification method: $/setTraceNotification
 2020.12.28 18:58:34 WARN  Build server is not auto-connectable.
 2020.12.28 18:58:34 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.12.28 18:58:53 INFO  shutting down Metals
+2021.01.07 15:01:05 INFO  Started: Metals version 0.9.8 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2021.01.07 15:01:06 INFO  time: initialize in 1s
+2021.01.07 15:01:09 WARN  Build server is not auto-connectable.
+2021.01.07 15:01:09 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2021.01.07 16:12:16 INFO  shutting down Metals
+2021.01.07 17:28:53 INFO  Started: Metals version 0.9.8 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2021.01.07 17:28:54 INFO  time: initialize in 0.7s
+2021.01.07 17:28:56 WARN  Build server is not auto-connectable.
+2021.01.07 17:28:56 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2021.01.07 17:54:30 INFO  shutting down Metals
+2021.01.07 18:31:44 INFO  Started: Metals version 0.9.8 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2021.01.07 18:31:45 INFO  time: initialize in 0.9s
+2021.01.07 18:31:47 WARN  Build server is not auto-connectable.
+2021.01.07 18:31:47 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2021.01.07 18:31:47 WARN  no build target for: /home/jsrl/Documentos/Mini-proyectos/Cloud/Python/Project/microservices/DB/FileUsers/sebas.reyes/Prueba/Prueba3/Ejercicio.scala
+2021.01.07 18:31:53 INFO  no build target: using presentation compiler with only scala-library

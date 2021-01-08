@@ -26,7 +26,7 @@
 
 .container .data li .directory {
     display: grid;
-    grid-template-columns: 20px 1fr;
+    grid-template-columns: 20px 1fr 20px;
     width: 100%;
     height: 100%;
     align-items: center;
@@ -43,9 +43,18 @@
     grid-column: 2;
 }
 
+.container .data li .directory .delete {
+    grid-column: 3;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .container .data .files {
     display: grid;
-    grid-template-columns: 20px 1fr;
+    grid-template-columns: 20px 1fr 20px;
     align-items: center;
     transition: all 0.3s;
 }
@@ -63,4 +72,13 @@
 
 .container .data .files .name {
     grid-column: 2;
+}
+
+.container .data li .directory .delete {
+    grid-column: 3;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }

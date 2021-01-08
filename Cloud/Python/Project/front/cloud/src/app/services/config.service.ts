@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = 'http://127.0.0.1:32768';
+  configUrl = 'http://192.168.10.16:32769';
   constructor( private http: HttpClient ) {  }
 
   getConfig(path: string): any {
@@ -19,5 +19,9 @@ export class ConfigService {
     formData.append('file', file, name);
     console.log(`${this.configUrl}/saveFile/${path}`);
     return this.http.post(`${this.configUrl}/saveFile/${path}`, formData);
+  }
+
+  deleteFile(path, name): any {
+    return this.http.post(`${this.configUrl}/removeFile/${path}`, {filename: name});
   }
 }

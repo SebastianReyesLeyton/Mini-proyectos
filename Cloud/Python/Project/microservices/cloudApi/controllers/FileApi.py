@@ -33,3 +33,34 @@ def saveFile(path):
     except Exception as e:
         print(e)
 
+@file_api.route('/removeFile/<string:path>', methods=['POST'])
+def removeFile(path):
+    try:
+        resp = None
+        name = request.json['filename']
+        path = '/'.join(path.split('-'))
+        path = '{0}/{1}'.format(path, name)
+        if fileService.removeFile(path):
+            resp = jsonify({'message': 'Ok'})
+            resp.status_code = 200
+        else:
+            name = path.split('/')[-1]
+            route = path.split('/')
+            route.pop()
+            route = '/'.join(route)
+            resp = jsonify({'message': 'Doesn\'t exist a file with name {0} in the route: {1}'.format(name, route)})
+            resp.status_code = 406
+        return resp
+    except Exception as e:
+        print(e)
+
+@file_api.errorhandler(404)
+def not_found(error=None):
+    message = {
+        'status': 404,
+        'message': 'Not Found: ' + request.url,
+    }
+    resp = jsonify(message)
+    resp.status_code = 404
+
+    return resp

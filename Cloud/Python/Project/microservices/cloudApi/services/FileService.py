@@ -15,3 +15,11 @@ class FileService(object):
 
     def saveFile(self, file, route, filename):
         file.save('../../db/{0}/{1}'.format(route, filename))
+
+    def removeFile(self, route):
+        route = '../../db/{0}'.format(route)
+        return self.filesRepository.deleteFile(route)
+
+    def removeDirectory(self, route):
+        route = '../../db/{0}'.format(route)
+        return self.filesRepository.deleteDir(route)

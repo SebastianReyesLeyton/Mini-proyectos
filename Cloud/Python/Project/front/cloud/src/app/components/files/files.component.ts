@@ -48,6 +48,15 @@ export class FilesComponent implements OnInit {
     this.getFiles();
   }
 
+  deleteFile(name): void {
+    this.configService
+      .deleteFile(`${user.username}${user.configUrl}`, name)
+      .subscribe((res) => {
+        console.log(res);
+        location.reload();
+      });
+  }
+
   ngOnInit(): void {
     this.getFiles();
   }
