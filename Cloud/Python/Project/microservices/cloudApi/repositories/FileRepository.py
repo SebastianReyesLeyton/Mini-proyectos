@@ -22,8 +22,7 @@ class FileRepository(object):
 
     def deleteDir(self, path):
         ans, directory = False, Path(path)
-        for d in directory.iterdir(): 
-            if d.is_dir(): ans = True
-        rmtree(path)
+        ans = directory.is_dir()
+        if ans: rmtree(path)
         return ans
         

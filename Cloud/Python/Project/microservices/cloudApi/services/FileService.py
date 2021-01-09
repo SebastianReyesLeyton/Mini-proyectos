@@ -1,3 +1,4 @@
+from os import mkdir
 from repositories.FileRepository import FileRepository
 from flask import send_from_directory
 
@@ -23,3 +24,11 @@ class FileService(object):
     def removeDirectory(self, route):
         route = '../../db/{0}'.format(route)
         return self.filesRepository.deleteDir(route)
+
+    def createDirectory(self, route):
+        route = '../../db/{0}'.format(route)
+        try:
+            mkdir(route)
+            return 'Ok'
+        except Exception as e:
+            return e

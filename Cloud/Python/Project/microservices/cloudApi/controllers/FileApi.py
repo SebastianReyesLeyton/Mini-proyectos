@@ -45,11 +45,39 @@ def removeFile(path):
             resp.status_code = 200
         else:
             name = path.split('/')[-1]
-            route = path.split('/')
-            route.pop()
+            route = path.split('/')[1:-1]
             route = '/'.join(route)
             resp = jsonify({'message': 'Doesn\'t exist a file with name {0} in the route: {1}'.format(name, route)})
             resp.status_code = 406
+        return resp
+    except Exception as e:
+        print(e)
+
+@file_api.route('/removeDirectory/<string:path>', methods=['POST'])
+def removeDirectory(path):
+    try:
+        resp = None
+        path = '/'.join(path.split('-'))
+        if fileService.removeDirectory(path):
+            resp = jsonify({'message': 'Ok'})
+            resp.status_code = 200
+        else:
+            name = path.split('/')[-1]
+            route = '/'.join(path.split('/')[1:-1])
+            resp = jsonify({'message': 'Doesn\'t exist a directory with name {0} in the route: {1}'.format(name, route)})
+            resp.status_code = 406
+        return resp
+    except Exception as e:
+        print(e)
+
+@file_api.route('/createDirectory/<string:path>', methods=['POST'])
+def createDirectory(path):
+    try:
+        path = '/'.join(path.split('-'))
+        message = {'message': fileService.createDirectory(path)}
+        resp = jsonify(message)
+        if message['message'] == 'Ok': resp.status_code = 200
+        else: resp.status_code = 400
         return resp
     except Exception as e:
         print(e)
