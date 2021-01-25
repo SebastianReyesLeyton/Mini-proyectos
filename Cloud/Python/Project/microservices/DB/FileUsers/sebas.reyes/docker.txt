@@ -1,0 +1,4 @@
+Eliminar docker-compose detenidos: sudo docker-compose rm
+Crear un docker-compose para web: sudo docker-compose up --build
+Detener un docker-compose: sudo docker-compose down
+Ver los docker-compose que estan en ejecucion: sudo docker-compose ps

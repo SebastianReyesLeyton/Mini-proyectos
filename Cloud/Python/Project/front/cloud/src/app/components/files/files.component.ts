@@ -57,6 +57,20 @@ export class FilesComponent implements OnInit {
       });
   }
 
+  getFile(name): void {
+    let route = `${user.username}${user.configUrl}-${name}`;
+    this.configService.getFile(route)
+      .subscribe((res) => {
+        console.log(res);
+        const a = document.createElement('a');
+        const objectUrl = URL.createObjectURL(res);
+        a.href = objectUrl;
+        a.download = name;
+        a.click();
+        URL.revokeObjectURL(objectUrl);
+      });
+  }
+
   ngOnInit(): void {
     this.getFiles();
   }

@@ -1,3 +1,1 @@
-Crear un nuevo proyecto: sbt new playframewok/play-scala-seed.g8
-Correr un proyecto: sbt run
-
+p

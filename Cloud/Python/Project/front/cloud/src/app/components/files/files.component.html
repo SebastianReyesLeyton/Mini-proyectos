@@ -13,7 +13,7 @@
             </div>
         </li>
         <li *ngFor="let file of info.files" class="files">
-            <i class="fas fa-file"></i> <label class="name">{{ file }}</label>
+            <i class="fas fa-file"></i> <label class="name" (click)='getFile(file)'>{{ file }}</label>
             <a (click)='deleteFile(file)' class="delete">
                 <i class="fas fa-minus-circle"></i>
             </a>

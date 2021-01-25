@@ -32,3 +32,7 @@ class FileService(object):
             return 'Ok'
         except Exception as e:
             return e
+    
+    def readFile(self, route):
+        route = '../../db/{0}'.format(route)
+        return self.filesRepository.readFile(route)

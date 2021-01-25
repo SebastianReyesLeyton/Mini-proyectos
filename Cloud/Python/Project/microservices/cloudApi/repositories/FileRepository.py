@@ -25,4 +25,7 @@ class FileRepository(object):
         ans = directory.is_dir()
         if ans: rmtree(path)
         return ans
+
+    def readFile(self, path):
+        return open(path, 'rb')
         

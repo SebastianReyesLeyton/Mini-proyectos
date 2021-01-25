@@ -68,3 +68,19 @@ INFORMACIÓN: Unsupported notification method: $/setTraceNotification
 2021.01.09 10:52:59 INFO  time: initialize in 1.54s
 2021.01.09 10:53:01 WARN  Build server is not auto-connectable.
 2021.01.09 10:53:01 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+ene 09, 2021 11:27:59 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMACIÓN: Unsupported notification method: $/setTraceNotification
+2021.01.09 19:10:52 INFO  shutting down Metals
+2021.01.23 14:05:51 INFO  Started: Metals version 0.9.8 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode.
+2021.01.23 14:05:52 INFO  time: initialize in 1.13s
+2021.01.23 14:05:54 WARN  Build server is not auto-connectable.
+2021.01.23 14:05:54 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+[0m2021.01.23 19:13:52 INFO  Started: Metals version 0.9.10 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode 1.52.1.[0m
+[0m2021.01.23 19:13:53 INFO  time: initialize in 0.55s[0m
+[0m2021.01.23 19:13:57 WARN  resetting database: /home/jsrl/Documentos/Mini-proyectos/.metals/metals.h2.db[0m
+[0m2021.01.23 19:13:59 WARN  Build server is not auto-connectable.[0m
+[0m2021.01.23 19:13:59 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.01.25 16:01:23 INFO  Started: Metals version 0.9.10 in workspace '/home/jsrl/Documentos/Mini-proyectos' for client vscode 1.52.1.[0m
+[0m2021.01.25 16:01:25 INFO  time: initialize in 1.4s[0m
+[0m2021.01.25 16:01:30 WARN  Build server is not auto-connectable.[0m
+[0m2021.01.25 16:01:30 WARN  no build tool detected in workspace '/home/jsrl/Documentos/Mini-proyectos'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m

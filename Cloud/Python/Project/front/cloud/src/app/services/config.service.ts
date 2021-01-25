@@ -7,8 +7,12 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = 'http://192.168.10.16:32769';
+  configUrl = 'http://192.168.1.8:32769';
   constructor( private http: HttpClient ) {  }
+
+  modifyNameFile(name): string {
+    return name.split('-').join('_');
+  }
 
   getConfig(path: string): any {
     return this.http.get(`${this.configUrl}/files/${path}`);
@@ -16,12 +20,16 @@ export class ConfigService {
 
   uploadFile(path, file, name): any {
     let formData = new FormData();
-    formData.append('file', file, name);
+    formData.append('file', file, this.modifyNameFile(name));
     console.log(`${this.configUrl}/saveFile/${path}`);
     return this.http.post(`${this.configUrl}/saveFile/${path}`, formData);
   }
 
   deleteFile(path, name): any {
     return this.http.post(`${this.configUrl}/removeFile/${path}`, {filename: name});
+  }
+
+  getFile(path): any {
+    return this.http.get(`${this.configUrl}/readFile/${path}`, {responseType: 'blob'});
   }
 }

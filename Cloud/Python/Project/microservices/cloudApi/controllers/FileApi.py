@@ -1,6 +1,6 @@
 from flask import Blueprint
 from app import app
-from flask import jsonify
+from flask import jsonify, send_file, send_from_directory
 from flask import flash, request
 from services.FileService import FileService
 
@@ -79,6 +79,14 @@ def createDirectory(path):
         if message['message'] == 'Ok': resp.status_code = 200
         else: resp.status_code = 400
         return resp
+    except Exception as e:
+        print(e)
+
+@file_api.route('/readFile/<string:path>', methods=['GET'])
+def readFile(path):
+    try:
+        path = '/'.join(path.split('-'))
+        return send_from_directory('../../db/{0}'.format('/'.join(path.split('/')[:-1])), path.split('/')[-1], as_attachment=True)
     except Exception as e:
         print(e)
 
