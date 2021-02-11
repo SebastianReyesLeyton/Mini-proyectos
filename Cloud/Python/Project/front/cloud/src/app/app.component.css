@@ -1,0 +1,14 @@
+#back {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back #files {
+    display: flex;
+    height: 70%;
+    width: 80%;
+    background-color: chocolate;
+    border-radius: 10px;
+}

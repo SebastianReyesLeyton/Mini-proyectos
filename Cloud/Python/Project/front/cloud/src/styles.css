@@ -4,4 +4,11 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    margin: 0px;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, rgb(95, 175, 129), rgb(184, 223, 208));
+    background-repeat: no-repeat;
 }

@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ConfigService {
-  configUrl = 'http://192.168.1.8:32769';
+  configUrl = 'http://192.168.1.8:32768';
   constructor( private http: HttpClient ) {  }
 
   modifyNameFile(name): string {

@@ -12,8 +12,8 @@
                 <i class="fas fa-folder" *ngIf="dir !== '/..'"></i> <label class="name">{{ dir }}</label>
             </div>
         </li>
-        <li *ngFor="let file of info.files" class="files">
-            <i class="fas fa-file"></i> <label class="name" (click)='getFile(file)'>{{ file }}</label>
+        <li *ngFor="let file of info.files" class="files" (click)='getFile(file)'>
+            <i class="fas fa-file"></i> <label class="name">{{ file }}</label>
             <a (click)='deleteFile(file)' class="delete">
                 <i class="fas fa-minus-circle"></i>
             </a>
